@@ -1,0 +1,342 @@
+@font-face {
+    font-weight: 700;
+    font-style: normal;
+    font-family: "Montserrat";
+    font-display: swap;
+    src:
+        local("Montserrat Bold"),
+        url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+        url("../fonts/Montserrat-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Montserrat";
+    font-display: swap;
+    src:
+        local("Montserrat SemiBold"),
+        url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+        url("../fonts/Montserrat-SemiBold.woff") format("woff");
+}
+
+@font-face {
+    font-weight: 400;
+    font-style: normal;
+    font-family: "Montserrat";
+    font-display: swap;
+    src:
+        local("Montserrat Regular"),
+        url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+        url("../fonts/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-weight: 300;
+    font-style: normal;
+    font-family: "Montserrat";
+    font-display: swap;
+    src:
+        local("Montserrat Light"),
+        url("../fonts/Montserrat-Light.woff2") format("woff2"),
+        url("../fonts/Montserrat-Light.woff") format("woff");
+}
+
+html {
+    box-sizing: border-box; /*Свойства width и height включают в себя значения полей и границ, но не отступов (margin)*/
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit; /*Применяется для изменения алгоритма расчета ширины и высоты элемента.Наследуется значение родителя*/
+}
+
+body {
+    min-width: 320px; /*Минимальная ширина*/
+    margin: 0; /*Обнуление внешних отступов*/
+    background-color: #fff; /*Цвет фона*/
+    font-family: "Montserrat", Arial, sans-serif; /*Шрифт по умолчанию*/
+    font-size: 16px; /*Расер текста*/
+    font-weight: 400; /*Толщина текста*/
+    color: #000; /*Цвет текста*/
+    line-height: 1; /*Обнуление межстрочного интервала*/
+}
+
+button, input {
+    font: inherit; /*Все характеристики шрифта и текста наследуются*/
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%; /*Максимальная ширина равна ширине экрана*/
+    height: auto; /*Высота рассчитывается автоматически*/
+}
+
+a {
+    text-decoration: none; /*Отменяет все эффекты, в том числе и подчеркивания у ссылок, которое задано по умолчанию.*/
+    color: inherit; /*Цвет наследуется*/
+}
+
+ul {
+    list-style: none; /*Универсальное свойство, позволяющее одновременно задать стиль маркера, его положение, а также изображение, которое будет использоваться в качестве маркера*/
+}
+
+h1, h2, h3, h4, p, ul {
+    padding: 0; /*Обнуление внутренних отступов*/
+    margin: 0; /*Обнуление внешних отступов*/
+}
+
+
+/* main */
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 150px;
+    background-image: url('../img/main-bg.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+}
+
+.main-container {
+    padding: 0 80px;
+}
+
+.main-wrapper {
+    margin: 60px 0 58px;
+}
+
+.main-heading {
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.main-descr {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+.main-descr:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.main-choice {
+    display: flex;
+}
+
+.btn-wrapper {
+    padding-top: 68px;
+    background-repeat: no-repeat;
+}
+
+.wrapper--buy {
+    margin-right: 20px;
+    background-image: url('../img/btn-buy-ic.svg');
+    background-position: center top;
+}
+
+.wrapper--send {
+    background-image: url('../img/btn-send-ic.svg');
+    background-position: center 8px;
+}
+
+.main-btn {
+    padding: 19px 33px;
+    max-width: 210px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    border: none;
+    border-radius: 12px;
+    transition: background-color .3s ease;
+}
+
+.btn--buy {
+    color: #000;
+    background-color: #fbcb03;
+}
+
+.btn--buy:hover {
+    background-color: #e6b901;
+}
+
+.btn--buy:active {
+    background-color: #e6b901;
+}
+
+.btn--send {
+    color: #fff;
+    background-color: #000;
+}
+
+.btn--send:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.btn--send:active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* offline */
+.offline {
+    padding: 87px 0 107px;
+    background-color: #fff;
+}
+
+.offline-container {
+    padding: 0 80px;
+}
+
+.offline-wrapper {
+    margin-bottom: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.offline__block {
+    flex-basis: calc((100% / 2) - 22px);
+    padding: 50px 52px 40px 25px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.offline__block-heading {
+    padding-left: 80px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    background-image: url('../img/btn-buy-ic.svg');
+    background-position: left center;
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+}
+
+.offline__block-sub {
+    display: flex;
+    justify-content: space-between;
+    margin: 150px 0 100px;
+}
+
+.sub-email {
+    margin-right: 10px;
+    padding: 16px 28px;
+    width: 100%;
+    background-color: #f8f8f8;
+    border: none;
+    border-radius: 11px;
+}
+
+.sub-btn {
+    padding: 16px 33px;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 11px;
+    transition: background-color .3s ease;
+}
+
+.sub-btn:hover {
+    background-color: #f2f2f2;
+}
+
+.sub-btn:active {
+    background-color: #f2f2f2;
+}
+
+.offline__block-agreement {
+    width: calc(100% / 2);
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.32);
+}
+
+.agreement-link {
+    text-decoration: underline;
+}
+
+.offline__block-thanks {
+    display: none;
+    padding: 166px 92px 182px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.offline__questions {
+    flex-basis: calc((100% / 2) - 22px);
+    display: flex;
+    flex-direction: column;
+    padding: 50px 25px;
+    background-color: #000;
+    border-radius: 20px;
+}
+
+.offline__questions-heading {
+    margin-bottom: 82px;
+    padding: 12px 0 12px 80px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #fff;
+    background-image: url('../img/btn-send-ic.svg');
+    background-position: left center;
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+}
+
+.offline__questions-item {
+    align-self: center;
+    margin-bottom: 20px;
+    padding: 16px 0;
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 45px;
+    text-align: center;
+    transition: background-color .3s ease,
+                color .3s ease;
+}
+
+.offline__questions-item:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.offline-return {
+    padding-left: 38px;
+    background-image: url('../img/arrow-return.svg');
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.return-link {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+}
+
+.offline__answer {
+    flex-basis: calc((100% / 2) - 22px);
+    display: none;
+    padding: 160px 100px 0 100px;
+    background-color: #000;
+    border-radius: 20px;
+}
+
+.offline__answer-heading {
+    padding-top: 120px;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #fff;
+    background-image: url('../img/answer-ic.svg');
+    background-position: center top;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+}
