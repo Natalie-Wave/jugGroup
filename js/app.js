@@ -14,3 +14,5 @@
             $('.offline__block-thanks').fadeIn(400);
         }, 300);
     });
+
+    setTimeout("$('#questions').fadeIn()", 1000);
